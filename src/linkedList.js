@@ -21,4 +21,17 @@ export default class LinkedList {
 
         current.next = tail;
     };
+
+    //adds a new node containing value to the start of the list
+    prepend(value) {
+        let next;
+
+        if (this.head === null) {
+            this.head = new Node(value);            
+        };       
+        
+        next = this.head;
+        this.head = new Node(value);
+        this.head.next = next;
+    };
 }
