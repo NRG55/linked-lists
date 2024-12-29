@@ -44,7 +44,12 @@ export default class LinkedList {
             counter++;
             current = current.next;
         };
-        
+
         return counter;
+    };
+
+    //returns the first node in the list
+    getHead() {
+        return this.head;
     };
 }
