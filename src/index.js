@@ -11,3 +11,4 @@ linkedList.prepend("test0");
 console.log(linkedList);
 console.log(linkedList.size());
 console.log(linkedList.getHead());
+console.log(linkedList.tail());
