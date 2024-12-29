@@ -9,3 +9,4 @@ linkedList.append("test4");
 linkedList.prepend("test0");
 
 console.log(linkedList);
+console.log(linkedList.size());

@@ -2,7 +2,7 @@ import Node from "./node.js";
 
 export default class LinkedList {
     constructor() {
-        this.head = null;
+        this.head = null;    
     };
 
     // Adds a new node containing value to the end of the list
@@ -33,5 +33,18 @@ export default class LinkedList {
         next = this.head;
         this.head = new Node(value);
         this.head.next = next;
+    };
+
+    //returns the total number of nodes in the list
+    size() {
+        let current = this.head;
+        let counter = 0;
+
+        while (current !== null) {
+            counter++;
+            current = current.next;
+        };
+        
+        return counter;
     };
 }
