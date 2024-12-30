@@ -63,4 +63,20 @@ export default class LinkedList {
 
         return current;
     };
+    
+    //returns the node at the given index
+    at(index) {
+        let current = this.head;               
+
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+
+            if (current == null) {
+                
+                return "End of the list: wrong index";
+            };
+
+          return current;
+        };
+    };
 }

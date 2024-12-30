@@ -12,3 +12,4 @@ console.log(linkedList);
 console.log(linkedList.size());
 console.log(linkedList.getHead());
 console.log(linkedList.tail());
+console.log(linkedList.at(2));
