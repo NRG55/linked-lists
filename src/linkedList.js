@@ -73,10 +73,22 @@ export default class LinkedList {
 
             if (current == null) {
                 
-                return "End of the list: wrong index";
+                return "End of the list: there is no node at the given index";
             };
 
           return current;
         };
+    };
+    //removed the last element from the list
+    pop() {
+        let current = this.head;
+        let previous;        
+
+        while (current.next !== null) { 
+            previous = current;           
+            current = current.next;
+        };
+
+        previous.next = null;
     };
 }

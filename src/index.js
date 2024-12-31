@@ -13,3 +13,6 @@ console.log(linkedList.size());
 console.log(linkedList.getHead());
 console.log(linkedList.tail());
 console.log(linkedList.at(2));
+linkedList.pop();
+console.log(linkedList);
+
