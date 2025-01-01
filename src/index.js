@@ -15,4 +15,5 @@ console.log(linkedList.tail());
 console.log(linkedList.at(2));
 linkedList.pop();
 console.log(linkedList);
+console.log(linkedList.contains("test2"));
 

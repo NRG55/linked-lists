@@ -91,4 +91,18 @@ export default class LinkedList {
 
         previous.next = null;
     };
+
+    //returns true if the passed in value is in the list and otherwise returns false
+    contains(value) {
+        let current = this.head;        
+
+        while (current !== null) {
+            if (current.value === value) {
+                return true;
+            }            
+            current = current.next;
+        };
+
+        return false;
+    };
 }
