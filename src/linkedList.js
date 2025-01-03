@@ -121,4 +121,20 @@ export default class LinkedList {
 
         return null;
     };
+
+    //represents a LinkedList objects as strings. In the format: ( value ) -> ( value ) -> ( value ) -> null
+    toString() {  
+        let current = this.head;
+        let linkedListString = "";
+        
+        while (current !== null) {
+            console.log(current.value)
+            linkedListString += `( ${current.value} ) -> `;
+            current = current.next;
+        };
+
+        linkedListString += "null";
+
+        return linkedListString;
+    };
 }

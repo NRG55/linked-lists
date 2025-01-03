@@ -17,4 +17,6 @@ linkedList.pop();
 console.log(linkedList);
 console.log(linkedList.contains("test2"));
 console.log(linkedList.find("test3"));
+console.log(linkedList.toString());
+
 
