@@ -79,6 +79,7 @@ export default class LinkedList {
           return current;
         };
     };
+
     //removed the last element from the list
     pop() {
         let current = this.head;
@@ -105,6 +106,7 @@ export default class LinkedList {
 
         return false;
     };
+
     //returns the index of the node containing value, or null if not found
     find(value) {
         let current = this.head;        
@@ -136,5 +138,16 @@ export default class LinkedList {
         linkedListString += "null";
 
         return linkedListString;
+    };
+
+    //inserts a new node with the provided value at the given index
+    insertAt(value, index) {      
+        let node = new Node(value);
+        const previousNode = this.at(index -1);
+
+        if (previousNode) {
+            node.next = previousNode.next;
+            previousNode.next = node;
+        };
     };
 }

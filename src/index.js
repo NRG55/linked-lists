@@ -18,5 +18,7 @@ console.log(linkedList);
 console.log(linkedList.contains("test2"));
 console.log(linkedList.find("test3"));
 console.log(linkedList.toString());
+linkedList.insertAt("Inserted Node", 2);
+console.log(linkedList);
 
 
