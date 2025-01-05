@@ -69,15 +69,15 @@ export default class LinkedList {
         let current = this.head;               
 
         for (let i = 0; i < index; i++) {
-            current = current.next;
+            current = current.next;     
 
-            if (current == null) {
+            if (current === null) {
                 
                 return "End of the list: there is no node at the given index";
-            };
-
-          return current;
+            };         
         };
+
+        return current;
     };
 
     //removed the last element from the list
@@ -143,11 +143,21 @@ export default class LinkedList {
     //inserts a new node with the provided value at the given index
     insertAt(value, index) {      
         let node = new Node(value);
-        const previousNode = this.at(index -1);
+        const previousNode = this.at(index - 1);
+        console.log(previousNode)
 
         if (previousNode) {
             node.next = previousNode.next;
             previousNode.next = node;
+        };
+    };
+
+    //removes the node at the given index
+    removeAt(index) {
+        const previousNode = this.at(index - 1);     
+
+        if (previousNode) {
+            previousNode.next = previousNode.next.next;
         };
     };
 }
