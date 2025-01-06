@@ -19,8 +19,7 @@ console.log(linkedList.contains("test2"));
 console.log(linkedList.find("test3"));
 console.log(linkedList.toString());
 linkedList.insertAt("Inserted Node", 1);
-console.log(linkedList);
-linkedList.removeAt(1);
+linkedList.removeAt(3);
 console.log(linkedList);
 
 

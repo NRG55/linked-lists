@@ -10,11 +10,14 @@ export default class LinkedList {
         const tail = new Node(value);
         let current;        
 
-        if (this.head === null) {           
-            return (this.head = tail);            
+        if (this.head === null) {
+            this.head = tail;
+            
+            return ;            
         };
         
         current = this.head;
+
         while (current.next !== null) {
             current = current.next;
         }
@@ -68,13 +71,13 @@ export default class LinkedList {
     at(index) {
         let current = this.head;               
 
-        for (let i = 0; i < index; i++) {
-            current = current.next;     
-
+        for (let i = 0; i < index; i++) { 
             if (current === null) {
-                
-                return "End of the list: there is no node at the given index";
-            };         
+          
+                return;
+            };
+            
+            current = current.next;    
         };
 
         return current;
@@ -129,8 +132,7 @@ export default class LinkedList {
         let current = this.head;
         let linkedListString = "";
         
-        while (current !== null) {
-            console.log(current.value)
+        while (current !== null) {           
             linkedListString += `( ${current.value} ) -> `;
             current = current.next;
         };
@@ -143,8 +145,14 @@ export default class LinkedList {
     //inserts a new node with the provided value at the given index
     insertAt(value, index) {      
         let node = new Node(value);
-        const previousNode = this.at(index - 1);
-        console.log(previousNode)
+
+        if (this.head === null) {
+            this.head = node;
+
+            return;
+        };
+
+        const previousNode = this.at(index - 1);       
 
         if (previousNode) {
             node.next = previousNode.next;
@@ -153,10 +161,15 @@ export default class LinkedList {
     };
 
     //removes the node at the given index
-    removeAt(index) {
+    removeAt(index) {       
+        if (this.head === null) {
+           
+            return;
+        };
+
         const previousNode = this.at(index - 1);     
 
-        if (previousNode) {
+        if (previousNode) {                   
             previousNode.next = previousNode.next.next;
         };
     };
